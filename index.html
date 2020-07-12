@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div id="calculatorDisplay">0</div>
+        <div class="calculatorKeys">
+            <div class="special--functions">
+                <button id="clearBtn" onclick="clearDisplay()">AC</button>
+                <button onclick="changeSign()">+/-</button>
+                <button onclick="percent()">%</button>
+            </div>
+            <div class="operators">
+                <button class="key--operator" onclick="operatorPress('+')">+</button>
+                <button class="key--operator" onclick="operatorPress('-')">-</button>
+                <button class="key--operator" onclick="operatorPress('/')">÷</button>
+                <button class="key--operator" onclick="operatorPress('*')">&times;</button>
+            </div>
+            <button onclick="numPress('7')">7</button>
+            <button onclick="numPress('8')">8</button>
+            <button onclick="numPress('9')">9</button>
+            <button onclick="numPress('4')">4</button>
+            <button onclick="numPress('5')">5</button>
+            <button onclick="numPress('6')">6</button>
+            <button onclick="numPress('1')">1</button>
+            <button onclick="numPress('2')">2</button>
+            <button onclick="numPress('3')">3</button>
+            <button class="key--zero" onclick="numPress('0')">0</button>
+            <button data-action="decimal" onclick="numPress('.')">.</button>
+            <button class="key--equal" data-action="calculate" onclick="calculateEqual()">=</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
